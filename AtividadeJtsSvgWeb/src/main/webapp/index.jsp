@@ -150,9 +150,9 @@
     			<div class="col">
     				<svg height="800" width="800" viewBox="${viewBox}">
     					<!--Path da Cidade 1-->
-  						<path d="${path1}" stroke="black" stroke-width="0.002" fill="red" fill-opacity="1" />
+  						<path name="${c1.nome}" d="${path1}" stroke="black" stroke-width="0.001" fill="red" fill-opacity="1" onclick="imprimirNome(evt)"/>
   						<!--Path da Cidade 2-->
-  						<path d="${path2}" stroke="black" stroke-width="0.002" fill="green" fill-opacity="1" />
+  						<path name="${c2.nome}" d="${path2}" stroke="black" stroke-width="0.001" fill="green" fill-opacity="1" onclick="imprimirNome(evt)"/>
 					</svg>
     			</div>
     		</div>
@@ -161,5 +161,12 @@
     	</div>
 
 <script src="js/materialize.js"></script>
+<script type="text/javascript">
+
+	function imprimirNome(evt){
+		alert(evt.target.getAttribute("name"));
+	}
+
+</script>
 </body>
 </html>
